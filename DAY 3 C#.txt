@@ -1,0 +1,1073 @@
+-----------------DAY 3-------------------
+----------------Class Object program on employee-------------------
+using System;
+   class Employee
+   {
+     public int EmployeeId;
+     public string EmployeeName;
+
+   }
+   public class Program
+   {
+       public static void Main(string[]args)
+       {
+        Employee employee = new Employee();//we have created an object.
+        Console.WriteLine("Please enter Employee ID");
+        employee.EmployeeId = Convert.ToInt32(Console.ReadLine());
+       
+        Console.WriteLine("Please enter Employee Name");
+        employee.EmployeeName = Console.ReadLine();
+        
+        Console.WriteLine(" Employee Details are:-");
+        Console.WriteLine(" EmployeeId :" + employee.EmployeeId);
+        Console.WriteLine("Employee Name :" + employee.EmployeeName);
+       
+        //Console.WriteLine();
+        Console.ReadLine();
+       }
+    }
+-------------------------------Class Object program on student---------------
+using System;
+   class Student
+   {
+     public int StudentRollno;
+     public string StudentName;
+
+   }
+   public class Program
+   {
+       public static void Main(string[]args)
+       {
+        Student student = new Student();//we have created an object.
+        Console.WriteLine("Please enter Student Roll No");
+        student.StudentRollno= Convert.ToInt32(Console.ReadLine());
+       
+        Console.WriteLine("Please enter Student Name");
+        student.StudentName= Console.ReadLine();
+        
+        Console.WriteLine(" Student Details are:-");
+        Console.WriteLine(" Student Roll No:" + student.StudentRollno);
+        Console.WriteLine("Student Name :" + student.StudentName);
+       
+        //Console.WriteLine();
+        Console.ReadLine();
+       }
+    }
+--------------------------Constructor Program-------------------------------------------------
+using System;
+   class Employee
+   {
+     public int EmployeeId;
+     public string EmployeeName;
+
+   }
+   public  Employee()
+   {
+     Console.WriteLine("I AM A DEFAULT CONSTRUCTOR");
+   }
+   public class Program
+   {
+       public static void Main(string[]args)
+       {
+          Employee employee = new Employee();
+          Console.ReadLine();
+        }
+    }
+---------------------------Default Constructor Program------------------------------------
+using System;
+   class Employee
+   {
+     public int EmployeeId;
+     public string EmployeeName;
+
+   }
+   public  Employee(int EmployeeId,string EmployeeName)
+   {
+     this.EmployeeId = EmployeeId;
+     this.EmployeeName = EmployeeName;
+   }
+   public class Program
+   {
+       public static void Main(string[]args)
+       {
+        Employee employee = new Employee(101,"Vikash");
+        Console.WriteLine(" Employee Details are:-");
+        Console.WriteLine(" EmployeeId :" + employee.EmployeeId);
+        Console.WriteLine("Employee Name :" + employee.EmployeeName);
+       
+          Console.ReadLine();
+        }
+    }
+
+---------------------------------Getdetails function program of employee--------------------------------------------
+
+using System;
+    class Employee
+   {
+     public int EmployeeId;
+     public string EmployeeName;
+
+   
+
+   public void GetEmployeeData()
+   {  
+    Console.WriteLine("Please enter Employee ID");
+    EmployeeId = Convert.ToInt32(Console.ReadLine());
+   
+    Console.WriteLine("Please enter Employee Name");
+    EmployeeName = Console.ReadLine();
+   
+   }
+   public void PrintEmployeeDetails()
+   {
+    Console.WriteLine(" Employee Details are:-");
+    Console.WriteLine(" EmployeeId :" + EmployeeId);
+    Console.WriteLine("Employee Name :" + EmployeeName);
+
+   }
+}
+   public class Program
+   {
+       public static void Main(string[]args)
+       {
+        Employee employee = new Employee();//we have created an object.
+        employee.GetEmployeeData();
+        employee.PrintEmployeeDetails();
+        Console.ReadLine();
+       }
+    }
+--------------------------Getdetails function program of student----------------------------------------------------------
+
+
+using System;
+    class Student
+   {
+     public int StudentRollno;
+     public string StudentName;
+
+   
+
+   public void GetStudentData()
+   {  
+    Console.WriteLine("Please enter Student Roll No");
+    StudentRollno = Convert.ToInt32(Console.ReadLine());
+   
+    Console.WriteLine("Please enter Student Name");
+    StudentName = Console.ReadLine();
+   
+   }
+   public void PrintStudentDetails()
+   {
+    Console.WriteLine(" Student Details are:-");
+    Console.WriteLine(" Student Roll No :" + StudentRollno);
+    Console.WriteLine("Student Name :" + StudentName);
+
+   }
+}
+   public class Program
+   {
+       public static void Main(string[]args)
+       {
+        Student student = new Student();//we have created an object.
+        student.GetStudentData();
+        student.PrintStudentDetails();
+        Console.ReadLine();
+       }
+    }
+--------------------------Copy Constructor program for employee------------------------------------------------
+using System;
+    class Employee
+   {
+     public int EmployeeId;
+     public string EmployeeName;
+    
+    public Employee(Employee emp) // deaclaring copy constructor
+   {
+    EmployeeId = emp.EmployeeId;
+    EmployeeName = emp.EmployeeName;
+
+   }
+     public  Employee(int EmployeeId,string EmployeeName) //parametrised constructor
+     {
+     this.EmployeeId = EmployeeId;
+     this.EmployeeName = EmployeeName;
+     }
+    public void PrintEmployeeDetails()
+    {
+    Console.WriteLine(" Employee Details are:-");
+    Console.WriteLine(" EmployeeId :" + EmployeeId);
+    Console.WriteLine("Employee Name :" + EmployeeName);
+    }
+}
+ public class Class1
+   {
+    public static void Main()
+    {
+     Employee emp1 = new Employee(101,"Vikash Verma");
+     Employee emp2 = new Employee(emp1);
+     emp2.PrintEmployeeDetails();
+     Console.ReadLine();
+    }
+  }
+----------------------Copy Constructor program for student-----------------------------------------
+using System;
+    class Student
+   {
+     public int StudentRollno;
+     public string StudentName;
+    
+    public Student(Student stud) // deaclaring copy constructor
+   {
+    StudentRollno = stud.StudentRollno;
+    StudentName = stud.StudentName;
+
+   }
+     public  Student(int StudentRollno,string StudentName) //parametrised constructor
+     {
+     this.StudentRollno = StudentRollno;
+     this.StudentName = StudentName;
+     }
+    public void PrintStudentDetails()
+    {
+    Console.WriteLine(" Student Details are:-");
+    Console.WriteLine(" StudentRollno :" + StudentRollno);
+    Console.WriteLine("Student Name :" + StudentName);
+    }
+}
+ public class Class1
+   {
+    public static void Main()
+    {
+     Student stud1 = new Student(101,"Vikash Verma");
+     Student stud2 = new Student(stud1);
+     stud2.PrintStudentDetails();
+     Console.ReadLine();
+    }
+  }
+------------------------------program on private constructor-----------------------------------------------
+using System;
+ public class Counter
+ {
+    
+  private Counter()
+  {
+
+  }
+ }
+  class Class2
+  {
+     public static void Main()
+     {
+     Console.WriteLine("---Private Constructor example--"); 
+     Console.WriteLine();
+     Console.WriteLine(); 
+     Console.ReadLine();
+     }
+}
+-----------------------------Program on static --------------------------------
+we cannot create object of this class therefore called static but can directly access it
+
+
+using System;
+   static class sample
+   {
+     public static string Topic = "Static Class";
+    }
+   class Class3
+   {
+    
+   public static void Main()
+   {
+    Console.WriteLine("Topic Name is " +sample.Topic); 
+    Console.ReadLine();
+   }
+}
+------------------------------non static class program---------------------------------------------
+using System;
+    class sample
+   {
+     public static string Topic = "Static Class";
+     public string temp = "Hello";
+    }
+   class Class3
+   {
+    
+   public static void Main()
+   {
+     sample sample = new sample();
+    Console.WriteLine("Topic Name is " +sample.Topic); 
+    Console.WriteLine("Topic Name is " +sample.temp); 
+    Console.ReadLine();
+   }
+}
+--------------------------use of public static void program----------------------------------
+using System;
+    class sample
+   {
+     public static string Topic = "Static Class";
+     public string temp = "Hello";
+    }
+    public static void show()
+    {
+    Console.WriteLine("Hello I am Static method!");
+
+    }
+   class Class3
+   {
+    
+   public static void Main()
+   {
+     sample sample = new sample();
+     sample.show();
+    Console.WriteLine("Topic Name is " +sample.Topic); 
+    Console.WriteLine("Topic Name is " +sample.temp); 
+    Console.ReadLine();
+   }
+}
+-----------------------------static constructor program--------------------------------------
+using System;
+  class Employee
+  {
+     static Employee()
+     {
+      Console.WriteLine("Hello I am Static Constructor!");
+      }
+  }
+   class Class4
+   {
+     public static void Main()
+     {
+     Employee employee = new Employee();
+     Console.WriteLine();
+     Console.ReadLine();
+     }
+   }
+------------------------------------------------------------------------
+when implement more than one constructor then called constructor chaining.
+
+we use constructor to create an object with creating memory space 
+we use destructor to clear object with clearing memory space so that other program use it
+---------------------------Constructor and destructor program------------------------------------------
+using System;
+  class Employee
+  {
+   public Employee() //constructor
+     {
+      Console.WriteLine("Hello I am Static Constructor!");
+      }
+     Employee() // destructor
+     {
+     Console.WriteLine("Hello I am Static Destructor!");
+     Console.ReadLine();
+     }
+    }
+    class Class4
+    {
+       public static void Main()
+       {
+        Employee employee = new Employee();
+        Console.WriteLine("Hi I am Main Program !");
+       }
+   }
+-----------------------------Program on local variables-------------------------------
+using System;
+  class Class5
+  {
+    public static void Main()
+    {
+//local variables
+     int a=5;
+     {
+       int b = 6;
+       Console.WriteLine("I am a block in MAin program b="+b);
+     }
+     Console.WriteLine("Iam called in main a="+a);
+    Console.ReadLine();
+   }
+}
+----------------------instance variable program-------------------------------------------
+creating multiple instance means instance i.e each object have copy of its instance  
+
+using System;
+  class Class5
+  {
+    //instance variable
+    public int a=6;
+    public static void Main()
+    {
+    //local variables
+    Class5 class5 = new Class5();
+    Console.WriteLine("Class Variable "+ class5.a);
+     int a=5;
+     {
+       int b = 6;
+       Console.WriteLine("I am a block in MAin program b="+b);
+     }
+     Console.WriteLine("I am called in main a="+a);
+    Console.ReadLine();
+   }
+}
+-----------------Inheritance Program-------------------------------------------
+using System;
+public class Employee //base class/parent class
+{
+    public float salary = 40000;
+}
+public class Programmer:Employee //Derived class/child class
+ {
+  public float bonus = 10000;
+ }
+  public class Class6
+  {
+   public static void  Main()
+   {
+    Programmer p1 = new Programmer();
+    Console.WriteLine(p1.bonus);
+    Console.WriteLine(p1.salary);
+    Console.ReadLine();
+   }
+ }
+---------------------------Inheritance Program of animal and dog---------------------------------------
+using System;
+ public class Animal
+  {
+   public void eat()
+   {
+    Console.WriteLine("Dog can eat");
+   }
+ }
+
+public class Dog:Animal
+ {
+  public void bark()
+ { 
+  Console.WriteLine("Dog can bark");
+ }
+   public static void  Main()
+   {
+    Dog d = new Dog();
+    d.eat();
+    d.bark();
+    Console.ReadLine();
+   }
+ }
+---------------------------------------Inheritance Program----------------------------------------------------
+
+using System;
+  public class Grandfather
+  {
+   
+   public Grandfather()
+   {
+    Console.WriteLine("I am in grandfather Class");
+   }
+   public void DisplayOne()
+   {
+   Console.WriteLine("I am grandfather");
+   }
+  }
+  public class father:Grandfather
+  {
+   
+   public father()
+   {
+    Console.WriteLine("I am in father Class");
+   }
+   public void DisplayTwo()
+   {
+   Console.WriteLine("I am father");
+   }
+  }
+
+  public class Son:father
+  {
+   
+   public Son()
+   {
+    Console.WriteLine("I am in Son Class");
+   }
+   public void DisplayThree()
+   {
+   Console.WriteLine("I am Son");
+   }
+  }
+  public class Class7
+  {
+   public static void Main()
+   {
+   Son ObjSon = new Son();
+   //ObjSon.DisplayOne();
+   //ObjSon.DisplayTwo();
+   //ObjSon.DisplayThree();
+   Console.ReadLine();
+  }
+}
+-------------------------Inheritance Program for shape--------------------------------------------------------------  
+using System;
+
+public class shape 
+{
+ 
+  
+}
+
+public class rectangle : shape  
+{
+ public void rectarea(int a , int b)
+ {
+ Console.WriteLine("area of rect is "+(a*b));
+ }
+}
+public class  square : rectangle
+{
+public void squarearea(int s)
+{
+Console.WriteLine("area of square is "+(s*s));
+}
+}
+
+
+public class Program
+{
+  public static void Main()
+  {
+	  square s1 = new square();
+	  Console.WriteLine("calculate area for 1.rectangle\n2.area of square");
+	  int choice=Convert.ToInt32(Console.ReadLine());
+	
+	  switch(choice)
+	  {
+		  case 1:
+			  {
+			   Console.WriteLine("enter length");
+	  int a=Convert.ToInt32(Console.ReadLine());
+			   Console.WriteLine("enter breadth");
+	  int b=Convert.ToInt32(Console.ReadLine());
+			  s1.rectarea(a,b);
+			  break;}
+		  case 2:
+			  {
+			  Console.WriteLine("enter side of square");
+	  int s=Convert.ToInt32(Console.ReadLine());
+			   s1.squarearea(s);
+			  break;
+			  }
+	 
+		  default:Console.WriteLine("invalid input");
+			  break;
+	  }
+  }
+}
+------------------------program for sealed keyword-------------------------------------------------------
+cannot inherit but can create object
+
+using System;
+ sealed class A
+ {
+ }
+ class B:A
+ {
+  
+
+ }
+  class Class8
+  {
+    public static void Main()
+    {
+    A a = new A();
+    }
+  }
+---------------------program for abstract keyword-----------------------------------------
+cannot create an object but can inherit
+
+using System;
+ public abstract class A
+ {
+   public abstract void Abstractshow();
+   public void NonAbstractShow()
+ {
+  Console.WriteLine("I am an not abstract method");
+ }
+ }
+ class B:A
+ {
+   public override void AbstractShow()
+ {
+  Console.WriteLine("I am an abstract method defincation in class B");
+ }
+
+ }
+  class Class8
+  {
+    public static void Main()
+    {
+    B b = new B();
+    b.Abstractshow();
+    b.NonAbstractShow();
+    Console.ReadLine();
+    }
+  }
+---------------------Program on wholeseller--------------------------------------------------
+using System;
+
+public abstract class wholeseller
+{
+  public abstract void Discount();
+}
+public class retailer : wholeseller
+{
+int price=0;
+ public void Price()
+  {
+    Console.WriteLine("enter price");
+	price=Convert.ToInt32(Console.ReadLine());
+	  
+  }
+  public override void Discount()
+  {
+  Console.WriteLine("enter discount");
+	int discount=Convert.ToInt32(Console.ReadLine());
+	int amt=price-discount;
+	Console.WriteLine("Discounted amount is "+amt);
+    
+  }
+}
+
+public class Program
+{
+public   static void Main(string[] args)
+  {
+    retailer r1 = new retailer(); 
+    r1.Price(); 
+    r1.Discount(); 	
+  }
+}
+-----------------------Program given by sir------------------------------------------------------------------------------------
+Create a new C # project with three classes plus another class to test the logic in your code. The main classes of the program are the following classes:
+
+ 
+
+Person
+Student
+Professor
+The Student and Teacher classes inherit from the Person class.
+
+ 
+
+The Student class will include a public Study() method that will write I'm studying on the screen.
+
+ 
+
+The Person class must have two public methods Greet() and SetAge(int age) that will assign the age of the person.
+
+ 
+
+The Teacher class will include a public Explain() method that will write I'm explaining on the screen.
+
+ 
+
+Also create a public method ShowAge() in the Student class that writes My age is: x years old on the screen.
+
+ 
+
+You must create another test class called StudentProfessorTest with a Main method to do the following:
+
+ 
+
+Create a new Person and make him say hello
+Create a new Student, set an age, say hello, and display her age on the screen.
+Create a new Teacher, set an age, say hello and start the explanation.
+
+
+
+using System;
+ 
+public class StudentAndTeacherTest
+{
+    public static void Main()
+    {
+        Person myPerson = new Person();
+        myPerson.Greet();
+ 
+        Student myStudent = new Student();
+        myStudent.SetAge(24);
+        myStudent.Greet();
+        myStudent.ShowAge();
+        myStudent.Study();
+ 
+        Teacher myTeacher = new Teacher();
+        myTeacher.SetAge(30);
+        myTeacher.Greet();
+        myTeacher.Explain();
+    }
+}
+ 
+public class Person
+{
+    protected int age;
+ 
+    public void Greet()
+    {
+        Console.WriteLine("Hello!");
+    }
+ 
+    public void SetAge(int n)
+    {
+        age = n;
+    }
+}
+ 
+public class Student : Person
+{
+    public void Study() 
+    {
+        Console.WriteLine("I'm studying");
+    }
+ 
+    public void ShowAge()
+    {
+        Console.WriteLine("My age is {0} years old", age);
+    }
+}
+ 
+public class Teacher : Person
+{
+    public void Explain()
+    {
+        Console.WriteLine("I'm explaining");
+    }
+}
+-------------------------------------------------------------Program given by sir-----------------------------------------------------------------------------------------
+
+
+
+Create a C# program to manage a photo book using object-oriented programming.
+
+ 
+
+To start, create a class called PhotoBook with a private attribute numPages of type int. 
+It must also have a public method GetNumberPages that will return the number of photo book pages.
+
+ 
+
+The default constructor will create an album with 16 pages. 
+There will be an additional constructor, with which we can specify the number of pages we want in the album.
+
+ 
+
+There is also a BigPhotoBook class whose constructor will create an album with 64 pages.
+
+ 
+
+Finally create a PhotoBookTest class to perform the following actions:
+
+ 
+
+Create a default photo book and show the number of pages
+Create a photo book with 24 pages and show the number of pages
+Create a large photo book and show the number of pages
+
+using System;
+
+public class PhotoBookTest
+{
+    public static void Main()
+    {
+        PhotoBook myAlbum1 = new PhotoBook();
+        Console.WriteLine(myAlbum1.GetNumberPages());
+
+        PhotoBook myAlbum2 = new PhotoBook(24);
+        Console.WriteLine(myAlbum2.GetNumberPages());
+
+        BigPhotoBook myBigPhotoAlbum1 = new BigPhotoBook();
+        Console.WriteLine(myBigPhotoAlbum1.GetNumberPages());
+    }
+}
+
+public class PhotoBook
+{
+    protected int numPages;
+
+    public PhotoBook()
+    {
+        numPages = 16;
+    }
+
+    public PhotoBook(int numPages)
+    {
+        this.numPages = numPages;
+    }
+
+    public int GetNumberPages()
+    {
+        return numPages;
+    }
+}
+
+public class BigPhotoBook : PhotoBook
+{
+    public BigPhotoBook()
+    {
+        numPages = 64;
+    }
+}
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+using System;
+  //Abstract class
+   {
+   public abstract void displayOne();
+   }
+  //Interface
+   interface ISample
+    {
+    void displayTwo();
+    }
+  //Inheriting from sample class and implementing ISample Interface
+    class Class9: Sample,ISample
+  {
+      public override void displayOne()
+      {
+        Console.WriteLine("Hi I am from Abstract Class");
+      }
+      public void displayTwo()
+     {
+      Console.WriteLine("Hi I am from Interface");
+     }
+     public static void Main()
+     {
+       Class9 class9 = new Class9();
+       class9.displayOne();
+       class9.displayTwo();
+       Console.ReadLine();
+      }
+    }
+----------------------Program on interface---------------------------------------
+using System;
+  interface I1
+  {
+   void languages();
+   }
+  interface I2
+   {
+    void Courses();
+   }
+  class Class10:I1,I2
+   {
+     public void languages()
+     {
+      Console.WriteLine("Hi i am from I1 interface");
+     }
+     public void Courses()
+     {
+     Console.WriteLine("Hi i am from I2 interface");
+     }
+     public static void Main()
+     {
+     Class10.class10 = new Class10();
+     class10.Courses();
+     class10.languages();
+     ConsoleReadLine();
+     }
+   }
+------------------------Program given by sir----------------------------------------------
+Create a C# program that implements an IVehiculo interface with two methods, 
+one for Drive of type void and another for Refuel of type bool that has a 
+parameter of type integer with the amount of gasoline to refuel. 
+Then create a Car class with a builder that receives a parameter with the car's 
+starting gasoline amount and implements the Drive and Refuel methods of the car.
+
+ 
+
+The Drive method will print on the screen that the car is Driving, 
+if the gasoline is greater than 0.
+ The Refuel method will increase the gasoline of the car and return true.
+
+ 
+
+To carry out the tests, create an object of type Car with 0 of gasoline
+ in the Main of the program and ask the user for an amount of gasoline to 
+refuel, finally execute the Drive method of the car.
+
+ 
+
+Input :
+50
+
+ 
+
+Output :
+Driving
+
+
+using System;
+ 
+public class FirstInterface
+{
+    public static void Main(string[] args)
+    {
+        Car car = new Car(0);
+ 
+        int fuel = int.Parse(Console.ReadLine());
+        if (car.Refuel(fuel))
+        {
+            car.Drive();
+        }
+    }
+ 
+    public interface IVehicle
+    {
+        void Drive();
+        bool Refuel(int amount);
+    }
+ 
+    public class Car : IVehicle
+    {
+        public int Fuel { get; set; }
+ 
+        public Car(int fuel)
+        {
+            Fuel = fuel;
+        }
+ 
+        public void Drive()
+        {
+            if (Fuel > 0)
+            {
+                Console.WriteLine("Driving");
+            }
+            else
+            {
+                Console.WriteLine("Not fuel");
+            }
+        }
+ 
+        public bool Refuel(int amount)
+        {
+            Fuel += amount;
+            return true;
+        }
+    }
+}
+OR written by sir
+public interface IVehicle
+    {
+        void Drive();
+        bool Refuel(int amount);
+    }
+    public class Car: IVehicle
+    {
+        public int Fuel;
+        public Car(int Fuel)
+        {
+            this.Fuel = Fuel;
+        }
+        public void Drive()
+        {
+            if (Fuel > 0)
+            {
+                Console.WriteLine("Driving");
+            }
+            else
+            {
+                Console.WriteLine("No Fuel");
+            }
+        }
+        public bool Refuel(int amount)
+        {
+            Fuel = Fuel + amount;
+            return true;
+        }
+
+ 
+
+    }
+    class Class11
+    {
+        public static void Main()
+        {
+            Car car=new Car(0);
+            int fuel = int.Parse(Console.ReadLine());
+            if(car.Refuel(fuel))
+            {
+                car.Drive();
+            }
+            Console.ReadLine();
+        }
+    }
+--------------------------Program given by sir on abstract class--------------------------------------------------------------------------------------------------------
+Create a C# program that implements an abstract class 
+Animal that has a Name property of type text and three methods 
+SetName (string name), GetName and Eat. 
+The Eat method will be an abstract method of type void.
+
+You will also need to create a Dog class that implements 
+the above Animal class and the Eat method that says the dog is Eating.
+
+To test the program ask the user for a dog name and 
+create a new Dog type object from the Main of the program,
+ give the Dog object a name, and then execute the GetName and Eat methods.
+Dog-concrete class
+animal-abstract class
+
+
+using System;
+ 
+public class AbstractClass
+{
+    public static void Main(string[] args)
+    {
+        Dog dog = new Dog();
+        dog.SetName(Console.ReadLine());
+        Console.WriteLine(dog.GetName());
+        dog.Eat();
+    }
+ 
+    public class Dog : Animal
+    {
+        public override void Eat()
+        {
+            Console.WriteLine("Eating");
+        }
+    }
+ 
+    public abstract class Animal
+    {
+        private string Name;
+ 
+        public void SetName(string name)
+        {
+            Name = name;
+        }
+ 
+        public string GetName()
+        {
+            return Name;
+        }
+ 
+        public abstract void Eat();
+    }
+}
+--------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
