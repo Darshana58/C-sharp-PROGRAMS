@@ -1,0 +1,601 @@
+----------hello world program---------
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		Console.WriteLine("Hello World");
+	}
+}
+
+
+-------summation program---------
+using System;
+
+    public class Program
+    {
+        public static void Main(string[] args)
+        {  
+            int x = 5;
+            int y = 6;
+            Console.WriteLine(x+y);
+            Console.ReadLine();
+        }
+    }
+
+-------------TYPECASTING PROGRAM------------------------
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Day_1
+{   
+    class Program
+    {
+        static void Main(string[] args)
+        {  
+            int x,y;
+            Console.WriteLine("Enter the value of x: ");
+            x = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the value of x: ");
+            y = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("X+Y= "(x+y));
+            Console.ReadLine();
+        }
+    }
+}
+---------Operations programs----------
+using System;
+
+    public class Program
+    {
+        public static void Main(string[] args)
+        {  
+            int x = 5;
+            int y = 6;
+            Console.WriteLine(x*y);
+            Console.ReadLine();
+        }
+    }
+-------------------
+using System;
+
+    public class Program
+    {
+        public static void Main(string[] args)
+        {  
+            int x = 5;
+            int y = 6;
+            Console.WriteLine(x/y);
+            Console.ReadLine();
+        }
+    }
+------------------
+using System;
+
+    public class Program
+    {
+        public static void Main(string[] args)
+        {  
+            int x = 5;
+            int y = 6;
+            Console.WriteLine(x-y);
+            Console.ReadLine();
+        }
+    }
+
+
+-------------Even and Odd----------
+using System;
+
+   public class Program
+   { 
+    
+     public static void Main(string[] args)
+      {  
+        int Number;
+        Console.WriteLine("Enter a Number: ");
+        Number = Convert.ToInt32(Console.ReadLine());
+        if(Number%2==0)
+        {
+         Console.WriteLine("Your Number is even ");
+        }
+        else
+        {
+         Console.WriteLine("Your Number is odd ");
+        }
+        Console.ReadLine();
+       }
+}
+-------------Voting Program----------
+
+using System;
+
+public class Program
+{
+     public static void Main()
+      {  
+		
+        int age;
+        Console.WriteLine("Enter a value age: ");
+        age = Convert.ToInt32(Console.ReadLine());
+        if(age>=18)
+        {
+         Console.WriteLine("Eligible");
+        }
+        else
+        {
+         Console.WriteLine("Not Eligible");
+        }
+        Console.ReadLine();
+       }
+}
+---------VOTING FOR SENIOR CITIZEN-------
+using System;
+
+public class Program
+{
+     public static void Main()
+      {  
+		
+        int age;
+        Console.WriteLine("Enter a value age: ");
+        age = Convert.ToInt32(Console.ReadLine());
+        if(age>=18)
+        {
+          if(age<60)
+          {
+         Console.WriteLine("Person is eligible for voting");
+        }
+        else
+        {
+         Console.WriteLine("Senior Citizen");
+        }
+      }
+    else
+        {
+          
+         Console.WriteLine("Person is not eligible for voting");
+         }
+        Console.ReadLine();
+       }
+}
+--------Greatest of 3------------
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		
+	
+		    int number1, number2, number3 ;
+			Console.WriteLine("Enter a number1");
+			number1=Convert.ToInt32(Console.ReadLine());
+			Console.WriteLine("Enter a number2");
+			number2=Convert.ToInt32(Console.ReadLine());
+			Console.WriteLine("Enter a number3");
+			number3=Convert.ToInt32(Console.ReadLine());
+		   
+		    if (number1>number2)
+				if (number1>number3)
+				{
+					Console.WriteLine("number 1 is greater");
+				}
+				else
+				{
+					Console.WriteLine("number 3 is greater");
+				}
+			else if  (number2>number3)
+			{
+				Console.WriteLine("number 2 is greater");
+			}
+		    else 
+			{
+				Console.WriteLine("number 3 is greater");
+			}
+
+			Console.ReadLine();
+				
+		
+	}
+}
+
+--------For 1-5 numbers,print their name program-------------
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		int Number;
+		Console.WriteLine("Enter a Number:");
+		Number = Convert.ToInt32(Console.ReadLine());
+	    
+		
+		 if(Number == 1)
+		 {
+			 Console.WriteLine("One");
+		 }
+	    else if (Number == 2)
+		{ 
+			 Console.WriteLine("Two");
+		}
+		else if (Number == 3)
+		{ 
+			 Console.WriteLine("Three");
+		}
+		else if (Number == 4)
+		{ 
+			 Console.WriteLine("Four");
+		}
+		else if (Number == 5)
+		{ 
+			 Console.WriteLine("Five");
+		}
+		else
+		{
+		Console.WriteLine("Please enter number in between 1-5");
+		}
+		Console.ReadLine();
+	}
+}
+----------switch case------------
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		int Number;
+		Console.WriteLine("Enter a Number:");
+		Number = Convert.ToInt32(Console.ReadLine());
+	    
+		
+		 switch(Number)
+		 {
+			 case 1:
+			    Console.WriteLine("One");
+				break;
+			 case 3:
+			    Console.WriteLine("Three");
+				break;
+			 case 4:
+			    Console.WriteLine("Four");
+				break;
+			case 5:
+			    Console.WriteLine("Five");
+				break;
+			default:
+		        Console.WriteLine("Please enter number in between 1-5");
+		        break;
+		}
+		Console.ReadLine();
+	}
+}
+----------for loop--------
+using System;
+
+public class Program
+{
+	public static void Main()
+	{
+          
+        for (int i = 1; i <=10;i++)
+         {
+           Console.WriteLine(i);
+         }
+        Console.ReadLine();
+      }
+}            
+-----------While loop--------
+using System;
+
+public class Program
+{
+	public static void Main()
+	{
+         int i=1; 
+          while(i <= 10)
+         {
+           Console.WriteLine(i);
+			i++;
+         }
+        Console.ReadLine();
+      }
+}    
+
+------------do while loop------------ 
+using System;
+
+public class Program
+{
+	public static void Main()
+	{
+         int i=1; 
+         do
+         {
+           Console.WriteLine(i);
+			i++;
+         } while (i <= 10);
+        Console.ReadLine();
+      }
+}       
+--------do while example-----
+using System;
+
+public class Program
+{
+	public static void Main()
+	{
+         int i=1; 
+         do
+         {
+           Console.WriteLine(i);
+			i++;
+         } while (1==0);
+        Console.ReadLine();
+      }
+}        
+------while example--------
+using System;
+
+public class Program
+{
+	public static void Main()
+	{
+         int i=1; 
+         while (1==0)
+         {
+           Console.WriteLine(i);
+		   i++;
+         }
+        Console.ReadLine();
+      }
+}         
+
+---------STar program-----
+using System;
+
+public class Program
+{
+	public static void Main()
+	{
+         int Number;
+		 Number = Convert.ToInt32(Console.ReadLine());
+		for(int i=1;i<=Number;i++)
+		{
+		  for(int j=1;j<=i;j++)
+		  {
+		  Console.Write(" * ");
+		  }
+			Console.WriteLine();
+		
+         }
+        Console.ReadLine();
+      }
+}  
+-------------Star Program odd wala--------------------------
+                                                    *
+                                                   ***
+                                                  *****
+using System;
+
+public class Program
+{
+	public static void Main()
+	{
+           int counter = 5;
+		for(int i=1;i<=5;i++)
+		{
+		  for(int j=1;j<= counter-1;j++)
+		  {
+		  Console.Write(" ");
+		  }
+		for (int k = 1; k <= 2*i-1; k++)
+                 {
+                   Console.Write("*");
+                    }	
+     
+             counter--;
+             Console.WriteLine();
+		
+         }
+        Console.ReadLine();
+      }
+}  
+-----------star program reverse-------------
+
+using System;
+public class Program                                     *****
+                                                          ***
+                                                           *
+{
+	public static void Main(String[] args)
+	{
+       
+		int n,m=1;
+		
+		n=3;
+	
+		for(int i=n;i>=1;i--)  
+   		{  
+       		for(int j=1;j<m;j++)  
+       		{  
+           		Console.Write(" ");  
+       		}  
+       		for(int k=1;k<=2*i-1;k++)  
+       		{  
+           		Console.Write("*");  
+      		 }  
+        m++;  
+     
+     		 Console.WriteLine(" ");  
+   		}
+		
+		Console.ReadLine();
+	}
+}
+
+---------------star progrAM random written by me--------------
+*****
+ ****
+  ***
+   **
+    *
+   **
+  ***
+ ****
+*****
+
+ 
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		
+	int i, j, k;
+            for (i = 5; i >= 1; i--)
+            {
+                for (j = 5; j > i; j--)
+                {
+                    Console.Write(" ");
+                }
+                for (k = 1; k <= i; k++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
+            }
+
+            for (i = 5; i >= 1; i--)
+            {
+                for (j = 1; j < i; j++)
+                {
+                    Console.Write(" ");
+                }
+                for (k = 5; k >= i; k--)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
+ }
+ }
+}
+--------------star program written by sir-------------------------------
+*****
+ ****
+  ***
+   **
+    *
+   **
+  ***
+ ****
+*****
+
+
+
+
+
+-----------------array first program written by sir-------------------------------------
+using System;
+public class Program
+{
+	public static void Main(string[] args)
+	{
+           int[]a = new int[3];
+           for (int i = 0; i< a.Length; i++)
+            {
+               Console.WriteLine("Enter value for a[" +i +"]: " );
+               a[i]=Convert.ToInt32(Console.ReadLine());
+             }
+              foreach (var item in a)
+             {
+                Console.WriteLine(item);
+             }
+             Console.ReadLine();
+     }
+}
+
+
+------------array program from1-10 numbers showing even and odd---------------
+using System;
+                   
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        int[] a=new int[10];
+        for(int i=0;i<a.Length;i++)
+        {
+           Console.WriteLine("enter value: " );
+           a[i]=Convert.ToInt32(Console.ReadLine());
+        }
+        foreach(var item in a)
+        {
+            if(item%2==0)
+            {
+                Console.WriteLine("Even:" +(item));
+            }
+            else
+            {
+                Console.WriteLine("odd:" +(item));
+               
+            }
+        }
+    }
+}
+--------------------array program for 1,2,1,3 where count number of times 1,2,3 comes;-------------------------------------------------        
+using System;  
+public class Program
+{  
+    public static void Main(string[] args) 
+{
+	int[] arr1 = new int[3];
+        int[] Counter = new int[3];
+
+        int counter;
+        //input values
+        Console.WriteLine("Input elements");
+        for (int i = 0; i < arr1.Length;i++)
+        {
+          arr1[i] = Convert.ToInt32(Console.ReadLine());
+           Counter[i] = -1;
+        }
+
+       
+        for (int i = 0; i < arr1.Length;i++)
+        {
+           counter = 1; 
+           for (int j = i+1; j < arr1.Length;j++)
+           {
+               if(arr1[i] == arr1[j])
+               {
+                  counter++;
+                  Counter[j] = 0;
+                }
+         }
+          if (Counter[i] !=0)
+           {
+                Counter[i] = counter;
+           }
+        }
+
+
+          for (int i = 0; i < arr1.Length;i++)  
+          {
+             if(Counter[i]!=0)
+                 {
+                   Console.Write("{0} occurs {1}",arr1[i],Counter[i]);
+                 }
+           }
+           Console.ReadLine();
+       }
+  } 
+
+-------------------------------------------------------------------------
